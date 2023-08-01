@@ -6,7 +6,7 @@ const Form = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  // const [department, setDepartment] = useState("");
+  const [department, setDepartment] = useState("");
   const [number, setNumber] = useState("");
 
   const sendHandler = () => {
@@ -16,7 +16,10 @@ const Form = () => {
       message.error("please enter your lastName");
     } else if (email.length === 0) {
       message.error("please enter your email");
-    } else if (number.length === 0) {
+    }else if (department.length === 0) {
+      message.error("please enter your department");
+    } 
+     else if (number.length === 0) {
       message.error("please enter your number");
     } else {
       message.success("send successfull");
@@ -70,7 +73,7 @@ const Form = () => {
       <div className="department">
         <div>
           <label htmlFor="Department">Department</label>
-          <select>
+          <select value={department}>
             <option value="0">Department</option>
             <option value="1">Audi</option>
             <option value="2">BMW</option>
