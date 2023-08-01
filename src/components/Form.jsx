@@ -43,6 +43,9 @@ const Form = () => {
           <input name="number" id="number" />
         </div>
       </div>
+      <div className="submit">
+        <button>Submit</button>
+      </div>
     </div>
   );
 };
