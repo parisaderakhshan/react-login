@@ -59,3 +59,33 @@
   border-radius: 10px;
   height: 35px;
 }
+
+.department {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.department > div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+
+}
+.department > div > select {
+  height: 35px;
+  width: 100%;
+  border-radius:10px;
+
+}
+.department > div > label {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.department > div > input {
+  height: 35px;
+  border-radius: 10px;
+
+}

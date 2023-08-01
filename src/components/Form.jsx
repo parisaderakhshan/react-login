@@ -22,9 +22,24 @@ const Form = () => {
         </div>
       </div>
       <div className="email">
-      <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email</label>
 
-        <input type="text"  name="email" id="email" />
+        <input type="text" name="email" id="email" />
+      </div>
+
+      <div className="department">
+        <div>
+          <label htmlFor="Department">Department</label>
+          <select>
+            <option value="0">Department</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="number">No. of Employees</label>
+          <input name="number" id="number" />
+        </div>
       </div>
     </div>
   );
