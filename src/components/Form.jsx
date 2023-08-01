@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../image/logo.png";
 import "./Form.css";
+
 const Form = () => {
   return (
     <div className="container">
@@ -17,14 +18,15 @@ const Form = () => {
           <input type="text" name="user_name" id="user_name" />
         </div>
         <div>
-          <label htmlFor="">LastName</label>
+          <label htmlFor="last_name">LastName</label>
           <input type="text" name="last_name" id="last_name" />
         </div>
       </div>
       <div className="email">
-        <label htmlFor="email">Email</label>
-
-        <input type="text" name="email" id="email" />
+        <div>
+          <label htmlFor="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
       </div>
 
       <div className="department">
