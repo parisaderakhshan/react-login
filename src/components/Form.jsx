@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../image/logo.png";
 import "./Form.css";
-
 const Form = () => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  // const [department, setDepartment] = useState("");
+  const [number, setNumber] = useState("");
+
   return (
     <div className="container">
       <div className="heading">
@@ -15,17 +20,35 @@ const Form = () => {
       <div className="user_name">
         <div>
           <label htmlFor="user_name">Name</label>
-          <input type="text" name="user_name" id="user_name" />
+          <input
+            type="text"
+            name="user_name"
+            id="user_name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
         <div>
           <label htmlFor="last_name">LastName</label>
-          <input type="text" name="last_name" id="last_name" />
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
         </div>
       </div>
       <div className="email">
         <div>
           <label htmlFor="email">Email</label>
-          <input type="text" name="email" id="email" />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
       </div>
 
@@ -40,7 +63,12 @@ const Form = () => {
         </div>
         <div>
           <label htmlFor="number">No. of Employees</label>
-          <input name="number" id="number" />
+          <input
+            name="number"
+            id="number"
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+          />
         </div>
       </div>
       <div className="submit">

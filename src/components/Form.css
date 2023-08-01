@@ -148,4 +148,9 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  font-size:16px;
+}
+.submit > button:hover{
+  background: rgb(0, 138, 78);
+  color: white;
 }
