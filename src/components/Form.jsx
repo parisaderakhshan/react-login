@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import Logo from "../image/logo.png";
 import "./Form.css";
+import { message } from "antd";
 const Form = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   // const [department, setDepartment] = useState("");
   const [number, setNumber] = useState("");
+
+  const sendHandler = () => {
+    if (name.length === 0) {
+      message.error("please enter your name");
+    } else if (lastName.length === 0) {
+      message.error("please enter your lastName");
+    } else if (email.length === 0) {
+      message.error("please enter your email");
+    } else if (number.length === 0) {
+      message.error("please enter your number");
+    } else {
+      message.success("send successfull");
+    }
+  };
 
   return (
     <div className="container">
@@ -71,7 +86,7 @@ const Form = () => {
           />
         </div>
       </div>
-      <div className="submit">
+      <div className="submit" onClick={sendHandler}>
         <button>Submit</button>
       </div>
     </div>
